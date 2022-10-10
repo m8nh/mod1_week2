@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+    <script>
+        inputVatly = prompt("Nhập điểm Vật lý");
+        inputHoahoc = prompt("Nhập điểm Hóa học");
+        inputSinhhoc = prompt("Nhập điểm Sinh học");
+
+     var vatly= parseInt(inputVatly);
+        var hoahoc= parseInt(inputHoahoc);
+     var sinhhoc= parseInt(inputSinhhoc);
+    var diemtong = vatly + hoahoc + sinhhoc;
+     var diemtb = diemtong/3;
+
+        document.write("điểm tong" + diemtong);
+        document.write('<br/>')
+        document.write("điểm trung bình" + diemtb);
+
+</script>
+
+</body>
+</html>
