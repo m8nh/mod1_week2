@@ -5,6 +5,54 @@
     <title>Title</title>
 </head>
 <body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
 
+        </tr>
+        <tr>
+            <td><input type="text" id="Amount"></td>
+            <td>
+                <select id="From_Currency">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="To_Currency">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td> <button onclick= "ChangeMoney()">Convert</button></td>
+        </tr>
+    </table>
+    <p id="result"></p>
+    <script>
+        function ChangeMoney() {
+            let amount = document.getElementById("Amount").value;
+            let fromC  = document.getElementById("From_Currency").value;
+            let to = document.getElementById("To_Currency").value;
+            let result = document.getElementById("result");
+            let ketqua;
+
+
+            if (fromC === "USD" && to === "VND") {
+                ketqua = "Result: " + (amount * 23000) + " Đ";
+            }
+            else if (fromC === "VND" && to ==="USD"){
+                ketqua = "Result: "+ (amount / 23000) + " $";
+            }
+            else if (fromC === "VND") {
+                ketqua = "Result:" + amount + " Đ"
+            } else {
+                ketqua = "Result:" + amount + " $"
+            }
+            result.innerHTML = ketqua;
+        }
+    </script>
 </body>
 </html>
+
