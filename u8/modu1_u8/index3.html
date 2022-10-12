@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+    <script>
+        var userName = prompt("Who's there?", '');
 
+        if (userName == 'Admin') {
+            alert('Welcome');
+        } else if (userName == null){
+            alert('Canceled');
+        } else {
+            alert("I don't know you")
+        }
+
+        var pass = prompt("Passworld", '');
+
+        if (pass == 'theMaster') {
+            alert('Welcome!');
+        } else if (pass == null) {
+            alert('Canceled.');
+        } else {
+            alert('Wrong password');
+        }
+    </script>
 </body>
 </html>
