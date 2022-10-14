@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 200px;
+            height: 150px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body >
+<div>
+    <img id="img1" src="1.jpeg" onclick="changeImg1()" alt="">
+    <img id="img2" src="2.jpeg" onclick="changeImg2()" alt="">
+    <img id="img3" src="3.jpeg" onclick="changeImg3()" alt="">
+</div>
+<script>
+    let a = 0;
+    let b = 0;
+    let c = 0;
+    let img1= document.getElementById('img1');
+    let img2 = document.getElementById('img2');
+    let img3 = document.getElementById('img3');
+    function changeImg1() {
+        let random = Math.floor(Math.random() * 3); // 0 -> 3
+        console.log(random)
+        a++;
+        if(a > 2){
+            a = 0;
+        }
+        img1.src = random + ".jpeg"
+        check();
+    }
+
+    function changeImg2() {
+
+        b++;
+        if(b > 2){
+            b = 0;
+        }
+        img2.src = "gamepuzzle/2.jpeg" + b + ".jpeg"
+        check();
+    }
+
+    function changeImg3() {
+        c++;
+        if(c > 2){
+            c = 0;
+        }
+        img3.src = "gamepuzzle/3.jpeg" + c + ".jpeg"
+        check()
+    }
+    function check() {
+
+        if (a === b && b === c ) {
+            img1.style.boxShadow = 'red 4px 4px 9px';
+            img2.style.boxShadow = 'red 4px 4px 9px';
+            img3.style.boxShadow = 'red 4px 4px 9px';
+        }else {
+            img1.style.boxShadow = 'white 4px 4px 9px';
+            img2.style.boxShadow = 'white 4px 4px 9px';
+            img3.style.boxShadow = 'white 4px 4px 9px';
+        }
+
+    }
+</script>
+
+</body>
+</html>
