@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb = +prompt("Nhập N số nguyên tố đầu tiên:");
+    function ktraNT(numb) {
+        let countNT = 0;
+        let count = 0;
+        let n;
+        let a;
+        for (n = 2; n < 10000; n++) {
+            if (countNT < numb) {
+                for (a = 1; a <= n; a++) {
+                    if ((n % a) == 0) {
+                        count++
+                    }
+                }
+                if (count == 2) {
+                    document.write(n + '</br>');
+                    countNT++
+                }
+                count = 0;
+            }
+            else {
+                break;
+            }
+        }
+    }
+    ktraNT(numb);
+</script>
+</body>
+</html>
