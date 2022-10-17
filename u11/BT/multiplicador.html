@@ -7,12 +7,17 @@
 <body>
     <h1>Bảng cửu chương</h1>
     <script>
-        let sout, i, j;
-        sout = "<table border= '1' width= '360' cellspacing= '0' cellpadding= '15'>";
-        debugger;
-        for (i = 1; i<=10; i++) {
-
+        let z;
+        z = "<table border='1' width='800' height='500' cellspacing='0' cellpadding='3'>"
+        for (x = 1; x <=9; x++){
+            z = z + "<tr>";
+            for (y = 2; y <= 9; y++) {
+                z = z + "<td>" + y + ' x ' + x + " = " + (x*y) + "</td>";
+            }
+            z = z + "</tr>"
         }
+        z = z + "</table>"
+        document.write(z);
     </script>
 </body>
 </html>
