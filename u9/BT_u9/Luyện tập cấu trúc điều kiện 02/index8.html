@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let tuoi = +prompt("Nhập số tuổi:");
+    if (console.log(Number.isInteger(tuoi)) == false) {
+        alert("Số nhập vào không phải số tuổi của 1 người");
+    }
+    else if ((tuoi>0) && (tuoi<120)) {
+        alert("Số nhập vào là tuổi của 1 người")
+    }
+    else {
+        alert("Số nhập vào không phải số tuổi của 1 người");
+    }
+</script>
 
 </body>
 </html>

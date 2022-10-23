@@ -7,6 +7,18 @@
 <body>
 <script>
 
+        let tienvay = +prompt("Nhập số tiền đã vay ngân hàng:");
+        let thang = +prompt("Số tháng đã vay:");
+        let laixuat = +prompt("Lãi xuất hàng tháng (%):");
+        let lainganhang;
+        let a;
+        let tiengoc = tienvay;
+        for ( a = 1; a <= thang; a++) {
+        tiengoc = tiengoc + (tiengoc * (laixuat/100));
+    }
+        lainganhang = tiengoc - tienvay;
+        alert("Lãi ngân hàng sau " + thang + " tháng là: " + lainganhang + "VND");
+
 </script>
 </body>
 </html>

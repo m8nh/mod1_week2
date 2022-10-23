@@ -5,6 +5,41 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let luong = +prompt("Nhập tổng số tiền lương trước thuế đã nhận (triệu đồng):");
+    let mien = +prompt("Nhập số tiền được miễn thuế (triệu đồng):");
+    let khoantru = +prompt("Nhập các khoản miễn trừ (triệu đồng):")
+    let lgChiuThue = luong - mien;
+    let lgtinhThue = lgChiuThue - khoantru;
+    let thue;
+    if (luong <= 5) {
+        thue = lgChiuThue * 0.05;
+        alert("Thuế thu nhập cá nhân là: " + thue + " triệu đồng");
+    }
+    else if (luong <= 10 ) {
+        thue = lgChiuThue * 0.1;
+        alert("Thuế thu nhập cá nhân là: " + thue + " triệu đồng");
+    }
+    else if (luong <= 18) {
+        thue = lgChiuThue * 0.15;
+        alert("Thuế thu nhập cá nhân là: " + thue + " triệu đồng");
+    }
+    else if (luong <= 32) {
+        thue = lgChiuThue * 0.20;
+        alert("Thuế thu nhập cá nhân là: " + thue + " triệu đồng");
+    }
+    else if (luong <= 52) {
+        thue = lgChiuThue * 0.25;
+        alert("Thuế thu nhập cá nhân là: " + thue + " triệu đồng");
+    }
+    else if (luong <= 80) {
+        thue = lgChiuThue * 0.30;
+        alert("Thuế thu nhập cá nhân là: " + thue + " triệu đồng");
+    }
+    else {
+        thue = lgChiuThue * 0.35;
+        alert("Thuế thu nhập cá nhân là: " + thue + " triệu đồng");
+    }
+</script>
 </body>
 </html>
