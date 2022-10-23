@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let c = +prompt("Nhiệt độ hiện tại (độ C):");
+    while (c>100) {
+        c = +prompt("Yêu cầu hạ nhiệt độ:");
+    }
+    while (c<20) {
+        c = +prompt("Yêu cầu tăng nhiệt độ:");
+    }
+    alert("Nhiệt độ hiện tại là: " + c + " độ C");
+</script>
+</body>
+</html>

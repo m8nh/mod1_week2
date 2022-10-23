@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập N số fibonacci muốn hiển thị:");
+    let a = 0;
+    let b = 1;
+    let i, c;
+    document.write("1: "+a+"</br>");
+    document.write("2: "+b+"</br>");
+    for ( i = 0; i < (n-2); i++) {
+        c = b + a;
+        document.write((i+3)+": "+c+"</br>");
+        a = b;
+        b = c;
+    }
+</script>
+</body>
+</html>

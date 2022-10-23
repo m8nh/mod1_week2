@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập số n:");
+    let a = 0;
+    let count = 1;
+    let tong = 0;
+    while (count <= n) {
+        if ((a % 7) == 0) {
+            tong = tong + a;
+            count++;
+        }
+        a++;
+    }
+    alert("Tổng của "+n+" số chia hết cho 7 đầu tiên là: "+tong);
+</script>
+</body>
+</html>
